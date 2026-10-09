@@ -1,0 +1,34 @@
+{
+  "name": "takht",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@fontsource/anton": "^5.3.0",
+    "@fontsource/archivo": "^5.3.0",
+    "@fontsource/cinzel": "^5.3.0",
+    "@fontsource/manrope": "^5.3.0",
+    "@fontsource/noto-nastaliq-urdu": "^5.3.0",
+    "@fontsource/schibsted-grotesk": "^5.3.0",
+    "@supabase/supabase-js": "^2.117.3",
+    "html-to-image": "^1.11.13",
+    "next": "^16.4.0",
+    "react": "19.2",
+    "react-dom": "19.2",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
+  }
+}
