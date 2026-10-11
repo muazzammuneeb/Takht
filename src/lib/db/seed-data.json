@@ -1,0 +1,40 @@
+{
+  "_comment": "Times are minutes before 'now' at seed time, so the Today board always has activity. Used by the local store and scripts/gen-seed-sql.mjs.",
+  "listings": [
+    { "key": "kolachi", "name": "Kolachi Grill", "category": "Food", "city": "Karachi", "website": "https://kolachi.example.pk", "tagline": "Seafood and karahi by the sea since 2004", "status": "live", "ago": 43200 },
+    { "key": "lawnghar", "name": "Lawn Ghar", "category": "Fashion", "city": "Lahore", "website": "https://lawnghar.example.pk", "tagline": "Unstitched lawn, stitched to your door in 48 hours", "status": "live", "ago": 40000 },
+    { "key": "byteforge", "name": "ByteForge Labs", "category": "Tech", "city": "Islamabad", "website": "https://byteforge.example.pk", "tagline": "Product engineering for teams that ship weekly", "status": "live", "ago": 38000 },
+    { "key": "rickshaw", "name": "Rickshaw Pay", "category": "Startups", "city": "Karachi", "website": "https://rickshawpay.example.pk", "tagline": "QR payments for every dukaan in Pakistan", "status": "live", "ago": 30000 },
+    { "key": "pehalwan", "name": "Pehalwan Fitness", "category": "Health & Fitness", "city": "Lahore", "website": "https://pehalwan.example.pk", "tagline": "Desi strength training, modern coaching", "status": "live", "ago": 25000 },
+    { "key": "ustad", "name": "Ustad Online", "category": "Education", "city": "Rawalpindi", "website": "https://ustad.example.pk", "tagline": "O/A Level tutors, live and recorded", "status": "live", "ago": 20000 },
+    { "key": "dukaan", "name": "Dukaan Express", "category": "Ecommerce", "city": "Faisalabad", "website": "https://dukaanexpress.example.pk", "tagline": "Home textiles shipped nationwide, COD", "status": "live", "ago": 15000 },
+    { "key": "chai", "name": "Chai Wala Corner", "category": "Local", "city": "Peshawar", "website": "https://chaiwala.example.pk", "tagline": "Kahwa, doodh patti and the best bun kebab", "status": "live", "ago": 12000 },
+    { "key": "safai", "name": "Safai Pros", "category": "Services", "city": "Islamabad", "website": "https://safaipros.example.pk", "tagline": "Deep cleaning for homes and offices", "status": "live", "ago": 9000 },
+    { "key": "multani", "name": "Multani Sohan Halwa House", "category": "Food", "city": "Multan", "website": "https://sohanhalwa.example.pk", "tagline": "Original desi ghee sohan halwa, shipped worldwide", "status": "live", "ago": 6000 },
+    { "key": "newbie", "name": "Quetta Dry Fruits", "category": "Food", "city": "Quetta", "website": "https://quettadryfruit.example.pk", "tagline": "Chilghoza, almonds and dried apricots from Balochistan", "status": "pending", "ago": 60 }
+  ],
+  "bids": [
+    { "listing": "kolachi", "amount": 12000, "ago": 43000 },
+    { "listing": "kolachi", "amount": 8500, "ago": 20000 },
+    { "listing": "kolachi", "amount": 28000, "ago": 2000 },
+    { "listing": "lawnghar", "amount": 15000, "ago": 39000 },
+    { "listing": "lawnghar", "amount": 33501, "ago": 100 },
+    { "listing": "byteforge", "amount": 5000, "ago": 37000 },
+    { "listing": "byteforge", "amount": 25000, "ago": 7000 },
+    { "listing": "rickshaw", "amount": 18000, "ago": 29000 },
+    { "listing": "rickshaw", "amount": 9000, "ago": 300 },
+    { "listing": "pehalwan", "amount": 7500, "ago": 24000 },
+    { "listing": "pehalwan", "amount": 2500, "ago": 200 },
+    { "listing": "ustad", "amount": 6000, "ago": 19000 },
+    { "listing": "ustad", "amount": 4000, "ago": 8000 },
+    { "listing": "dukaan", "amount": 4200, "ago": 14000 },
+    { "listing": "dukaan", "amount": 3000, "ago": 120 },
+    { "listing": "chai", "amount": 3500, "ago": 11000 },
+    { "listing": "chai", "amount": 1500, "ago": 90 },
+    { "listing": "safai", "amount": 2500, "ago": 8800 },
+    { "listing": "multani", "amount": 2000, "ago": 5900 },
+    { "listing": "multani", "amount": 3000, "ago": 45 },
+    { "listing": "newbie", "amount": 500, "ago": 55, "status": "pending", "method": "jazzcash", "ref": "JC-88213471" },
+    { "listing": "safai", "amount": 3000, "ago": 30, "status": "pending", "method": "bank", "ref": "IBFT 004412" }
+  ]
+}

@@ -1,0 +1,726 @@
+/*
+ * Share cards and social posts. Every artboard is a fixed pixel size; nothing here may depend on
+ * the viewport, because the same node is exported to PNG with html-to-image.
+ */
+.art {
+  position: relative;
+  overflow: hidden;
+  flex: none;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+.art * {
+  box-sizing: border-box;
+}
+.art .ur {
+  font-family: "Noto Nastaliq Urdu", serif;
+  direction: rtl;
+  line-height: 1.8;
+  font-weight: 400;
+}
+.art-sq {
+  width: 1080px;
+  height: 1080px;
+}
+.art-wide {
+  width: 1200px;
+  height: 675px;
+}
+
+/* ================= Darbar ================= */
+.dar {
+  background: radial-gradient(ellipse 80% 60% at 50% 38%, #124536 0%, #0b2f25 70%);
+  color: #f3ebd8;
+  font-family: "Manrope", sans-serif;
+}
+.dar-frame-1,
+.dar-frame-2 {
+  position: absolute;
+  pointer-events: none;
+}
+.dar-frame-1 {
+  inset: 28px;
+  border: 2px solid rgb(212 168 75 / 0.6);
+}
+.dar-frame-2 {
+  inset: 38px;
+  border: 1px solid rgb(212 168 75 / 0.25);
+}
+.dar-wordmark {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #d4a84b;
+}
+.dar-wordmark b {
+  font-family: "Cinzel", serif;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+}
+.dar-rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #d4a84b 20%, #d4a84b 80%, transparent);
+}
+.dar-badge {
+  border-radius: 50%;
+  border: 3px solid #d4a84b;
+  box-shadow: 0 0 0 8px #0b2f25, 0 0 0 9px rgb(212 168 75 / 0.45);
+  background: #0e3a2e;
+  color: #d4a84b;
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.dar-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Darbar share card */
+.dar-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 92px 110px 84px;
+}
+.dar-card .dar-wordmark b {
+  font-size: 34px;
+}
+.dar-card .dar-wordmark .ur {
+  font-size: 30px;
+  color: #c9be9f;
+  margin-top: -6px;
+}
+.dar-card .dar-badge {
+  width: 176px;
+  height: 176px;
+  font-size: 64px;
+  margin-top: 58px;
+}
+.dar-card-name {
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  font-size: 58px;
+  line-height: 1.12;
+  color: #fbf6ea;
+  margin-top: 40px;
+  max-width: 860px;
+}
+.dar-card-rank {
+  font-family: "Cinzel", serif;
+  font-weight: 900;
+  font-size: 250px;
+  line-height: 0.92;
+  color: #d4a84b;
+  margin-top: 20px;
+  letter-spacing: -0.02em;
+}
+.dar-card-label {
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #fbf6ea;
+  margin-top: 14px;
+}
+.dar-card-scope {
+  font-size: 32px;
+  font-weight: 600;
+  color: #c9be9f;
+  margin-top: 8px;
+}
+.dar-card-foot {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 26px;
+  font-weight: 600;
+  color: #c9be9f;
+  padding-top: 22px;
+  border-top: 1px solid rgb(212 168 75 / 0.45);
+}
+.dar-card-foot .site {
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  color: #d4a84b;
+  letter-spacing: 0.08em;
+}
+.dar-card-foot .ur {
+  font-size: 30px;
+  color: #d4a84b;
+  line-height: 1;
+  padding-top: 8px;
+}
+
+/* Darbar wide post (1200×675) */
+.dar-wide {
+  display: grid;
+  grid-template-columns: 470px 1fr;
+  padding: 62px 70px 56px;
+  gap: 0 44px;
+}
+.dar-wide-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-right: 1px solid rgb(212 168 75 / 0.45);
+  padding-right: 44px;
+}
+.dar-wide-hero .dar-wordmark b {
+  font-size: 26px;
+}
+.dar-wide-hero .ur.title {
+  font-size: 32px;
+  color: #d4a84b;
+  margin-top: 6px;
+  line-height: 1.9;
+}
+.dar-wide-hero .dar-badge {
+  width: 112px;
+  height: 112px;
+  font-size: 42px;
+  margin-top: 26px;
+}
+.dar-wide-name {
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.12;
+  color: #fbf6ea;
+  margin-top: 24px;
+}
+.dar-wide-meta {
+  font-size: 19px;
+  color: #c9be9f;
+  margin-top: 6px;
+}
+.dar-wide-total {
+  font-size: 24px;
+  font-weight: 800;
+  color: #d4a84b;
+  margin-top: auto;
+}
+.dar-wide-list {
+  display: flex;
+  flex-direction: column;
+}
+.dar-wide-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.14em;
+  color: #d4a84b;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgb(212 168 75 / 0.45);
+}
+.dar-wide-head span:last-child {
+  font-family: "Manrope", sans-serif;
+  letter-spacing: 0;
+  font-weight: 600;
+  color: #c9be9f;
+  font-size: 18px;
+}
+.dar-wide-row {
+  display: grid;
+  grid-template-columns: 54px 1fr auto;
+  align-items: center;
+  gap: 14px;
+  height: 64px;
+  border-bottom: 1px solid rgb(212 168 75 / 0.18);
+}
+.dar-wide-row .r {
+  font-family: "Cinzel", serif;
+  font-weight: 900;
+  font-size: 30px;
+  color: #d4a84b;
+}
+.dar-wide-row .n {
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  font-size: 23px;
+  color: #fbf6ea;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dar-wide-row .n small {
+  display: block;
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #c9be9f;
+}
+.dar-wide-row .t {
+  font-weight: 800;
+  font-size: 20px;
+  color: #f3ebd8;
+}
+.dar-wide-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #d4a84b;
+  letter-spacing: 0.08em;
+}
+.dar-wide-foot .ur {
+  font-size: 24px;
+  line-height: 1;
+  padding-top: 6px;
+  letter-spacing: 0;
+}
+
+/* ================= Truck Art ================= */
+.trk {
+  background: #14204a;
+  color: #fff;
+  font-family: "Archivo", sans-serif;
+}
+.trk-band {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 86px;
+  background: #0c1533;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px;
+}
+.trk-band.top {
+  top: 0;
+}
+.trk-band.bottom {
+  bottom: 0;
+}
+.trk-band i {
+  display: block;
+  width: 28px;
+  height: 28px;
+  transform: rotate(45deg);
+  border-radius: 3px;
+}
+.trk-band i:nth-child(4n + 1) {
+  background: #f2a900;
+}
+.trk-band i:nth-child(4n + 2) {
+  background: #ff6fa5;
+}
+.trk-band i:nth-child(4n + 3) {
+  background: #3fd0c0;
+}
+.trk-band i:nth-child(4n + 4) {
+  background: #ffffff;
+}
+.trk-band.bottom i:nth-child(odd) {
+  width: 20px;
+  height: 20px;
+}
+.trk-pill {
+  display: inline-flex;
+  align-items: center;
+  background: #fff;
+  color: #14204a;
+  border-radius: 999px;
+  font-family: "Archivo", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+.trk-hero {
+  background: #f2a900;
+  color: #14204a;
+  border-radius: 40px;
+  box-shadow: 0 0 0 12px #14204a, 0 0 0 22px #ff6fa5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.trk-anton {
+  font-family: "Anton", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+.trk-badge {
+  border-radius: 50%;
+  background: #14204a;
+  color: #f2a900;
+  border: 5px solid #ff6fa5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Anton", sans-serif;
+  overflow: hidden;
+  flex: none;
+}
+.trk-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Truck share card */
+.trk-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 140px 90px 130px;
+}
+.trk-card-top {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 900px;
+}
+.trk-card-top .trk-badge {
+  width: 120px;
+  height: 120px;
+  font-size: 50px;
+}
+.trk-card-name {
+  font-size: 74px;
+  line-height: 1.02;
+  text-align: left;
+}
+.trk-card .trk-hero {
+  width: 520px;
+  height: 400px;
+  margin-top: 56px;
+}
+.trk-card-rank {
+  font-size: 270px;
+  line-height: 1;
+}
+.trk-card-label {
+  font-size: 50px;
+  color: #f2a900;
+  margin-top: 54px;
+  line-height: 1;
+}
+.trk-card-scope {
+  font-size: 34px;
+  font-weight: 700;
+  color: #3fd0c0;
+  margin-top: 14px;
+}
+.trk-card-foot {
+  position: absolute;
+  left: 90px;
+  right: 90px;
+  bottom: 112px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.trk-card-foot .trk-pill {
+  font-size: 30px;
+  padding: 12px 30px;
+}
+.trk-card-foot .date {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+}
+.trk-card-foot .ur {
+  font-size: 46px;
+  color: #ff6fa5;
+  line-height: 1;
+  margin-top: -18px;
+}
+
+/* Truck square post (1080×1080) */
+.trk-post {
+  padding: 112px 70px 120px;
+  display: flex;
+  flex-direction: column;
+}
+.trk-post-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.trk-post-head .title {
+  font-size: 62px;
+  line-height: 1;
+  color: #f2a900;
+}
+.trk-post-head .ur {
+  font-size: 40px;
+  color: #ff6fa5;
+  line-height: 1;
+  padding-top: 12px;
+}
+.trk-post-head .date {
+  font-size: 22px;
+  font-weight: 700;
+  color: #3fd0c0;
+  margin-top: 8px;
+}
+.trk-post .trk-hero {
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 26px;
+  height: 164px;
+  margin: 36px 22px 0;
+  padding: 0 34px;
+  border-radius: 30px;
+}
+.trk-post .trk-hero .rank {
+  font-size: 128px;
+  line-height: 1;
+}
+.trk-post .trk-hero .trk-badge {
+  width: 104px;
+  height: 104px;
+  font-size: 42px;
+}
+.trk-post .trk-hero .who {
+  min-width: 0;
+  flex: 1;
+}
+.trk-post .trk-hero .who .name {
+  font-size: 52px;
+  line-height: 1.05;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.trk-post .trk-hero .who .meta {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 6px;
+}
+.trk-post .trk-hero .total {
+  font-family: "Anton", sans-serif;
+  font-size: 40px;
+}
+.trk-rows {
+  margin-top: 40px;
+  display: grid;
+  gap: 8px;
+}
+.trk-row {
+  display: grid;
+  grid-template-columns: 64px 1fr auto;
+  gap: 18px;
+  align-items: center;
+  height: 46px;
+  background: #1d2c61;
+  border-radius: 12px;
+  padding: 0 18px 0 0;
+  overflow: hidden;
+}
+.trk-row .chip {
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Anton", sans-serif;
+  font-size: 30px;
+}
+.trk-row .n {
+  font-family: "Anton", sans-serif;
+  text-transform: uppercase;
+  font-size: 26px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.trk-row .n small {
+  font-family: "Archivo", sans-serif;
+  text-transform: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: #c4cbe6;
+  margin-left: 10px;
+}
+.trk-row .t {
+  font-weight: 800;
+  font-size: 22px;
+  color: #f2a900;
+}
+.trk-post-foot {
+  position: absolute;
+  left: 70px;
+  right: 70px;
+  bottom: 104px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: #c4cbe6;
+}
+.trk-post-foot .trk-pill {
+  font-size: 26px;
+  padding: 8px 24px;
+}
+
+/* New King alert */
+.trk-king {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 124px 80px 130px;
+}
+.trk-king .kicker {
+  font-size: 40px;
+  color: #3fd0c0;
+  letter-spacing: 0.08em;
+}
+.trk-king .headline {
+  font-size: 168px;
+  line-height: 0.95;
+  color: #f2a900;
+  margin-top: 6px;
+}
+.trk-king .ur {
+  font-size: 54px;
+  color: #ff6fa5;
+  line-height: 1.4;
+  margin-top: 6px;
+}
+.trk-king .trk-hero {
+  width: 760px;
+  padding: 30px 40px;
+  margin-top: 34px;
+  gap: 8px;
+}
+.trk-king .trk-hero .trk-badge {
+  width: 110px;
+  height: 110px;
+  font-size: 46px;
+}
+.trk-king .trk-hero .name {
+  font-size: 70px;
+  line-height: 1.02;
+  margin-top: 10px;
+}
+.trk-king .trk-hero .meta {
+  font-size: 24px;
+  font-weight: 700;
+}
+.trk-king .dethroned {
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 40px;
+  color: #fff;
+}
+.trk-king .dethroned b {
+  color: #ff6fa5;
+}
+
+/* ================= Minimal ================= */
+.min {
+  background: #fafaf7;
+  color: #101012;
+  font-family: "Schibsted Grotesk", sans-serif;
+  padding: 96px 96px 80px;
+  display: flex;
+  flex-direction: column;
+}
+.min-top {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.min-badge {
+  width: 112px;
+  height: 112px;
+  border-radius: 26px;
+  background: #101012;
+  color: #fafaf7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 44px;
+  letter-spacing: -0.02em;
+  overflow: hidden;
+  flex: none;
+}
+.min-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.min-name {
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+.min-rank {
+  display: flex;
+  align-items: flex-end;
+  font-weight: 800;
+  font-size: 360px;
+  line-height: 0.8;
+  letter-spacing: -0.07em;
+  margin-top: 96px;
+  margin-left: -14px;
+}
+.min-rank .hash {
+  color: #5b5b60;
+  font-weight: 600;
+  font-size: 0.5em;
+  letter-spacing: -0.02em;
+  margin-right: 0.04em;
+  line-height: 1.2;
+}
+.min-dot {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-left: 28px;
+  margin-bottom: 14px;
+  flex: none;
+}
+.min-label {
+  font-weight: 600;
+  font-size: 46px;
+  letter-spacing: -0.02em;
+  margin-top: 64px;
+}
+.min-scope {
+  font-size: 40px;
+  color: #5b5b60;
+  margin-top: 6px;
+  letter-spacing: -0.01em;
+}
+.min-foot {
+  margin-top: auto;
+  border-top: 2px solid #d9d8d2;
+  padding-top: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 26px;
+  color: #5b5b60;
+}
+.min-foot .brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #101012;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
